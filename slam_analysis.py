@@ -9,11 +9,13 @@ from google.cloud import speech
 import io
 import wave
 import json
-credentail_path = "E:\develop\Coursework-workspace\courseworkdevelopment-2789e2c1ca50.json"
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credentail_path
 
 
 SCRIPT_DIR = op.dirname(__file__)
+WORKSPACE_DIR = op.join(SCRIPT_DIR, "..")
+credentail_path = op.join(WORKSPACE_DIR, "courseworkdevelopment-2789e2c1ca50.json")
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credentail_path
+
 SALIENCY_DIFF_CONSTRAINT = 2
 FUNDAMENTAL_FREQUENCY_FRAME_LENGTH_MS = 35
 FRAME_SPACE_MS = 10
